@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Map 3D</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1> Bug Explorer 3D — Project Map</h1>
+      <div class="subtitle">
+        <span id="project-name">Loading...</span>
+        <span id="last-updated"></span>
+      </div>
+    </header>
+
+    <div id="stats-bar"></div>
+
+    <div id="controls">
+      <div class="filter-group">
+        <label>Status</label>
+        <div id="filter-status"></div>
+      </div>
+      <div class="filter-group">
+        <label>Phase</label>
+        <div id="filter-phase"></div>
+      </div>
+      <div class="filter-group">
+        <label>Stream</label>
+        <div id="filter-stream"></div>
+      </div>
+      <div class="filter-group">
+        <label>Priority</label>
+        <div id="filter-priority"></div>
+      </div>
+      <div class="toggle-group">
+        <button id="btn-collapse" class="toggle-btn">📁 Collapse Done</button>
+        <button id="btn-reset" class="toggle-btn">↻ Reset</button>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <aside id="sidebar">
+      <section>
+        <h2>🎯 Milestones</h2>
+        <div id="milestones"></div>
+      </section>
+      <section>
+        <h2> Node Details</h2>
+        <div id="node-detail-placeholder" class="placeholder">
+          Click any node in the graph to see its details.
+        </div>
+        <div id="node-detail" style="display: none;"></div>
+      </section>
+    </aside>
+  </div>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
